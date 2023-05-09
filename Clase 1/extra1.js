@@ -14,6 +14,7 @@ let string2 = "123123";
 let noEsUnNro = NaN; //Not a Number
 let noDefinido = undefined;
 let nulo = null;
+let infinito = Infinity; // Es un nro.
 
 // let recibirString = "";
 

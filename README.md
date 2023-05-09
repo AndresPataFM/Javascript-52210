@@ -1,1 +1,1 @@
-Esto es una compilación de los códigos vistos en clase
+Esto es una compilación de los códigos vistos en el curso de JS Flex de CoderHouse. Por su cuenta están incompletos y son de naturaleza complementaria a este.
