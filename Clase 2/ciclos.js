@@ -16,11 +16,11 @@ En el for:
 */
 // 🔸 Ejemplos 🔸
 
-// for(let i=0; i<5; i=i+1){
+// for(let i=0; i<5; i=i+1){ //i++
 //     console.log("Este es i:", i);
 // };
 
-// Un for que permite calcular el número X (ingresado pro prompt) de la secuencia de fibonacci
+// Un for que permite calcular el número X (ingresado por prompt) de la secuencia de fibonacci
 
 
 // 🔶 WHILE 🔶
@@ -64,15 +64,16 @@ Se suele utilizar cuando se quiere ejecutar el código al menos 1 vez aunque est
 
 // Nunca saludo pero siemrpe despido al menos una vez.
 
-// let saludo = false;
-// let despedida = false;
-// while(saludo){
-//     alert("¡HOLA!😀");
-//     saludo = confirm("¿Otro saludo?");
-// };
-// do{
-//     alert("¡Chau!😥");
-//     despedida = confirm("¿Otra despedida?");
-// } while(despedida);
+let saludo = false;
+let despedida = false;
+
+while(saludo){
+    alert("¡HOLA!😀");
+    saludo = confirm("¿Otro saludo?");
+};
+do{
+    alert("¡Chau!😥");
+    despedida = confirm("¿Otra despedida?");
+} while(despedida);
 
 // Log in con X cantidad de intentos

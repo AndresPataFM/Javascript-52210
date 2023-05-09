@@ -132,26 +132,26 @@ En el caso que un argumento sea verdadero, se ejecuta el código de este hasta f
 */
 // 🔸 Ejemplos 🔸
 // En un apartamento hay 6 inquilinos, 2 viven en el mismo cuarto, crea un algoritmo con switch para que nuestra máquina pueda con el nomrbe dado, decirle a que cuarto/piso ir
-let nombre = prompt("Ingrese su nombre").toLowerCase()
-switch(nombre){
-    case "andres":
-    case "agustin":
-        alert("Tu cuarto es el 1A");
-        break;
-    case "noel":
-        alert("Tu cuarto es el 1B");
-        break;
-    case "julian":
-        alert("Tu cuarto es el 2A");
-        break;
-    case "sebastian":
-        alert("Tu cuarto es el 2B");
-        break;
-    case "mariana":
-        alert("Tu cuarto es el 2B");
-        break;
-    default:
-        alert("Usted no vive aqui")
-}
+// let nombre = prompt("Ingrese su nombre").toLowerCase()
+// switch(nombre){
+//     case "andres":
+//     case "agustin":
+//         alert("Tu cuarto es el 1A");
+//         break;
+//     case "noel":
+//         alert("Tu cuarto es el 1B");
+//         break;
+//     case "julian":
+//         alert("Tu cuarto es el 2A");
+//         break;
+//     case "sebastian":
+//         alert("Tu cuarto es el 2B");
+//         break;
+//     case "mariana":
+//         alert("Tu cuarto es el 2B");
+//         break;
+//     default:
+//         alert("Usted no vive aqui")
+// }
 
 // NOTA:UNO PUEDE ANIDAR TODOS LOS VISTOS ACA
