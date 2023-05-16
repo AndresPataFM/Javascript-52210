@@ -77,3 +77,32 @@ do{
 } while(despedida);
 
 // Log in con X cantidad de intentos
+
+// 🔶 BREAK 🔶
+/* La palabra clave break frena la ejecución de un ciclo  */
+// 🔸 Ejemplos 🔸
+/* 
+for(let i=1; i<=10;i++){
+    console.log("console.log inicial: ", i)
+    if(i===4){
+        break
+    }
+    console.log("console.log final: ", i)
+}
+
+*/
+
+// 🔶 CONTINUE 🔶
+/* La palabra clave continue salta la ejecución de un ciclo  */
+// 🔸 Ejemplos 🔸
+/* 
+for(let i=1; i<=10;i++){
+    console.log("console.log inicial: ", i)
+    if(i===4){
+        continue
+    }
+    console.log("console.log final: ", i)
+}
+
+*/
+

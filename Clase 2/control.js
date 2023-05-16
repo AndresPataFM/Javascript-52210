@@ -4,7 +4,7 @@
 // 🔶 IF STATEMENT 🔶 
 /*
 La forma más sencilla de tomar decisiones
-
+s
 if(argumento){
     ~código a ejecutar;
 };
