@@ -1,12 +1,22 @@
 // 🟠 PARADIGMAS, convenciones, conceptos y buenas prácticas 🟠
 
 // 🔶 DRY - Dont Repeat Yourself 🔶
-// 🔶 KISS - Keep It Simple Stupid 🔶
-// 🔶 YAGNI - You Aint Gonna Need It 🔶
+// Evitar repetir código, usen funciones si un código se repite
 
+// 🔶 KISS - Keep It Simple Stupid 🔶
+// Simplificar dentro de lo posible
+
+// 🔶 Abstracción 🔶
+// habilidad de abstrae conceptos a código
+
+// 🔶 Modularidad 🔶
+//  Una función hace solo 1 cosa
+
+// 🔶 Expresividad 🔶
+//  nombren de manera sensata
+
+// 🔶 YAGNI - You Aint Gonna Need It 🔶
+// No hagan de mas
 
 // 🔶 Funcional vs Procedimental 🔶
-// 🔶 Abstracción 🔶
-// 🔶 Expresividad 🔶
-// 🔶 Modularidad 🔶
-
+//  prepar código que van a utilizar

@@ -46,10 +46,15 @@ function holaMundo(){
 };
 
 // Calculadora
-function calculadora(num1, num2, operacion){
+function validarNros(num1, num2){
     const tipoNum1 = typeof num1;
     const tipoNum2 = typeof num2;
-    if(tipoNum1!=='number' || tipoNum2!=='number'){
+    const nrosInvalidos = tipoNum1!=='number' || tipoNum2!=='number'
+    return nrosInvalidos
+}
+
+function calculadora(num1, num2, operacion){
+    if(validarNros(num1, num2)){
         console.warn("Error: se ingresaron datos que no son números")
         return NaN;
     };

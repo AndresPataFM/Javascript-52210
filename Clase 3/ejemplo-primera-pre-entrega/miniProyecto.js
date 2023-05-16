@@ -41,11 +41,11 @@ function calcularPromedio (){
             continue
         }
         alumnos++
-        sumaTotal += nota
+        sumaTotal += notaProcesada
         agregarAlumno = confirm("Hay más alumnos?")
         // sumaTaotal = sumaTotal + nota
     }
-    alert(`El promedio total de los ${alumnos} alumnos es: ${sumaTotal/alumnos}`)
+    alert(`El promedio total de los ${alumnos} alumnos es: ${(sumaTotal/alumnos)}`)
     return sumaTotal/alumnos
 }
 
