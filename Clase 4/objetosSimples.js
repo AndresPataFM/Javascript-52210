@@ -10,6 +10,7 @@ const objeto1 = {
     },
     metodo2: (a,b)=>a+b
 };
+const objeto1alt = {propiedad: "valor",propiedad2: 123,metodo: function (){console.log("lógica")},metodo2: (a,b)=>a+b};
 console.log();
 
 // Desde ES5 Js permite el uso de "trailing commas", comas al final del contenido

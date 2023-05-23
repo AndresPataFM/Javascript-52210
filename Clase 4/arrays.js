@@ -40,13 +40,14 @@ const array1LaRevancha = [
 // nombreArray[indice]
 
 array1[0]; //hola
-console.log("array1[0]",array1[0])
+// console.log("array1",array1)
+// console.log("array1[0]",array1[0])
 
-for (let i = 0; i < 8; i++) { 
-    const elemento = array1[i];
-    console.log("Indice:",i)
-    console.log("Elemento:",array1[i])
-}
+// for (let i = 0; i < array1.length; i++) { 
+//     const elemento = array1[i];
+//     console.log("Indice:",i)
+//     console.log("Elemento:",array1[i])
+// }
 
 // llamandolo de esa manera uno puede reasignar el valor del elemento si lo desea (Inclusivve si se utilizo const)
 
@@ -84,6 +85,7 @@ const testing9 = ["💙", "💚", "💜"]
 // ⭕ significa que el/los parámetros pueden utilizarse o no
 // ❌ no se usan los parámetros
 
+console.log(testing1)
 
 // 🔸 Agregar elementos 🔸
 // El parámetro es el elemento a agregar
@@ -107,15 +109,15 @@ console.log("push", testing2)
 // No utiliza parámetros
 
 // 🔹 💥Shift❌ 🔹
-// Quita un elemento al principio del array
+// Quita un elemento al principio del array. Retorna el elemento removido.
 
-testing3.shift()
+console.log(testing3.shift())
 console.log("shift", testing3)
 
 // 🔹 💥Unshift❌ 🔹
-// Agrega un elemento al principio del array
+// Agrega un elemento al principio del array. Retorna el elemento removido.
 
-testing4.pop()
+console.log(testing4.pop())
 console.log("pop", testing4)
 
 // 🔹 Delete y porque no utilizarlo 🔹 
@@ -126,6 +128,7 @@ console.log("pop", testing4)
 
 testing5.join("-")
 console.log("join", testing5)
+console.log('testing5.join()', testing5.join())
 console.log('testing5.join("-")', testing5.join("-"))
 console.log('testing5.join("")', testing5.join(""))
 
@@ -134,16 +137,17 @@ console.log('testing5.join("")', testing5.join(""))
 
 testing6.indexOf("💙")
 console.log("indexOf", testing6)
-console.log('testing6.indexOf("💙")', testing6)
-console.log('testing6.indexOf("🧡")', testing6)
+console.log('testing6.indexOf("💙")', testing6.indexOf("💙"))
+console.log('testing6.indexOf("🧡")', testing6.indexOf("🧡"))
+
 
 // 🔸 💖Includes✅ 🔸
 // Se fija si el parametro es estrictamente igual a algún elemento del array y retorna un booleano
 
 testing7.includes("💙")
 console.log("includes", testing7)
-console.log('testing7.includes("💙")', testing7)
-console.log('testing7.includes("🧡")', testing7)
+console.log('testing7.includes("💙")', testing7.includes("💙"))
+console.log('testing7.includes("🧡")', testing7.includes("🧡"))
 
 // 🔸 💥Sort⭕ 🔸
 // Ordena el array en orden ascendiente según el orden de los carácteres/números en UTF-16 ( https://www.fileformat.info/info/charset/UTF-16/list.htm ). Revisa los carácteres en orden sucesiva por lo que un 12, quedaría antes de un 3 al ser sorteado. No usa parámetro.
