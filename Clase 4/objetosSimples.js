@@ -17,7 +17,7 @@ console.log();
 
 // 🔶 Propiedades 🔶
 // Son "variables internas" del objeto, estas puedes ser cualquiera de los tipos de datos vistos, arrays y/u objetos.
-// No se pueden utilizar -
+// No se pueden utilizar "-"
 
 const objeto2 = {
     propiedad1:"hola", // Strings
