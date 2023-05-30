@@ -12,11 +12,12 @@
 // https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/JSON
 // Es el objeto con métodos que tiene Js para manipular/convertir datos relacionados a JSON
 
+
 // 🔹 Stringify 🔹 
 // JSON.stringify(variable)
 // Convierte una variable en un string JSON
 
-// 🔹 Stringify 🔹 
+// 🔹 Parse 🔹 
 // JSON.parse(variable)
 // Convierte un string JSON en datos de JS
 
@@ -28,6 +29,7 @@
 // Informacion que se guarda localmente en el ordenador
 // Solo maneja strings (los JSON son strings)
 // El objeto es localStorage
+// localStorage.setItem("Numero", 33)
 
 // 🔸 setItem 🔸
 // Guarda un valor en el localStorage
@@ -51,3 +53,21 @@
 // El objeto es sessionStorage
 // Solo maneja strings (los JSON son strings)
 // Tiene los mismos métodos que el localStorage
+
+
+let numero
+
+// sabemos que si no lo encuentra es null
+// null es falsey
+if(localStorage.getItem("Numero")===null||localStorage.getItem("Numero")===NaN){
+    numero = "No se ha ingresado un nro previamente"
+} else {
+    numero = localStorage.getItem("Numero")
+}
+
+const guardarNro = ()=>{
+    const pedirNro = prompt(`Ingrese un número.\n El nro anterior es: ${numero}`)
+    localStorage.setItem("Numero", Number(pedirNro))
+}
+
+guardarNro()

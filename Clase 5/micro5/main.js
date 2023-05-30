@@ -24,3 +24,59 @@ const carrito = [
 ]
 
 */
+
+const productos = []
+const carrito = {
+    totalDeCompra:0,
+    productosEnCarrito: [],
+    calcularTotal: function(){
+        this.totalDeCompra = 0
+        for(let i=0; i<this.productosEnCarrito.length;i++){
+            this.totalDeCompra+= this.productosEnCarrito[i].precio
+        }
+    },
+}
+
+
+
+class Producto{
+    constructor(nombre, id, precio){
+        this.nombre = nombre
+        this.id = id
+        this.precio = precio
+    }
+}
+
+const crearProducto = (nombre, id, precio)=>{
+    productos.push(new Producto(nombre, id, precio))
+    console.log(productos)
+}
+
+const moverProdACarrito = (productoID, arrayProductos)=>{
+    for(let i=0;i<arrayProductos.length; i++){
+        let prodActual = arrayProductos[i]
+        if(prodActual.id === productoID){
+            carrito.productosEnCarrito.push(prodActual)
+            break;
+        }
+    }
+}
+
+const inflacion = ()=>{
+    for(let i=0;i<productos.length; i++){
+        let prodActual = productos[i]
+        prodActual.precio = prodActual.precio*1.2
+    }
+    console.log(productos)
+}
+
+
+crearProducto("gaseosa", 1, 500)
+crearProducto("alfajor", 2, 250)
+crearProducto("chupetin", 3, 150)
+crearProducto("chicles", 4, 400)
+
+// moverProdACarrito(1, productos)
+// moverProdACarrito(1, productos)
+// moverProdACarrito(1, productos)
+// moverProdACarrito(1, productos)

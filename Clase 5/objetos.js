@@ -119,7 +119,7 @@ const animal2 = {
 // llamar un getter
 console.log(animal2.introduccion)
 
-// 🔸 Métodos estáticos 🔸
+// 🔸 Métodos/Variables estáticos/as 🔸
 // se utilizan para manterer el objeto, configuración fija o singletons
 // muy utilizado en videojuegos
 // poco usado en Js
