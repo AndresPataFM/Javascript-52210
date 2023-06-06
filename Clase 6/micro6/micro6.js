@@ -9,3 +9,43 @@
 💡 Ten presente que el precio del producto, debe guardarse como un número, y puede contener decimales: (utiliza las funciones acordes para controlar que se guarde correctamente esta información.
 💡 Ten presente también que, el código del producto, de ser numérico, se debe guardar como un número entero. Utiliza la función acorde para que así sea
 */
+
+class Producto {
+    constructor(id,descripcion, stock, precio){
+        this.id = id
+        this.descripcion = descripcion
+        this.stock = stock
+        this.precio = precio
+    }
+}
+
+const productos = []
+
+const existeId = (id)=>{
+    productos.some(elemento=>{
+        return elemento.id === id
+    })
+}
+
+const agregarProducto = (elemento)=>{
+    if(existeId(elemento.id)){
+        alert("Ya existe un producto con ese ID")
+    } else {
+        productos.push(elemento)
+    }
+    console.log(productos)
+}
+
+
+const crearProducto = ()=>{
+    alert("Esta creando un producto")
+    const id = parseInt(prompt("Por favor ingrese el id del producto"))
+    const descripcion = prompt("Por favor ingrese el descripcion del producto")
+    const stock = parseInt(prompt("Por favor ingrese el stock del producto"))
+    const precio = Number(prompt("Por favor ingrese el precio del producto"))
+    const nuevoProducto = new Producto(id,descripcion, stock, precio)
+    return nuevoProducto
+}
+
+agregarProducto(crearProducto())
+agregarProducto(crearProducto())

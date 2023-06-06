@@ -290,6 +290,7 @@ const fibonacci = (n) => {
     };
     return fibonacci(n-1) + fibonacci(n-2);
 }
+[1,1,2,3,5,8,13]
 
 // Factorial
 
@@ -299,6 +300,7 @@ const factorial = (nro) =>{
     }
     return nro * factorial(nro-1);
 }
+// !5 = 5*4*3*2*1
 
 // Para ahorrar tiempo de procesamiento podemos hacer una función de orden superior que revise/procese los datos ingresados.
 
