@@ -26,9 +26,25 @@ const carrito = [
 */
 
 const productos = []
+
+const guardarObjStorage = (clave, valor)=>{
+    // convierte en JSON y lo guarda en el localStorage
+    localStorage.setItem(clave, JSON.stringify(valor))
+}
+
+
+const buscarObjStorage = (clave)=>{
+    // busca en el localStorage y lo parsea
+    let temp = localStorage.getItem(clave)
+    if (temp !== null){
+        temp = JSON.parse(temp)
+    }
+    return temp
+}
+
 const carrito = {
     totalDeCompra:0,
-    productosEnCarrito: [],
+    productosEnCarrito: buscarObjStorage("carrito") || [],
     calcularTotal: function(){
         this.totalDeCompra = 0
         for(let i=0; i<this.productosEnCarrito.length;i++){
@@ -37,20 +53,20 @@ const carrito = {
     },
 }
 
-
-
 class Producto{
     constructor(nombre, id, precio){
         this.nombre = nombre
         this.id = id
         this.precio = precio
     }
+    // metodo para agregar prods al carrito con storage
+    agregarCarrito = function(){
+        moverProdACarrito(this.id,productos)
+        guardarObjStorage("carrito", carrito.productosEnCarrito)
+    }
 }
 
-const crearProducto = (nombre, id, precio)=>{
-    productos.push(new Producto(nombre, id, precio))
-    console.log(productos)
-}
+
 
 const moverProdACarrito = (productoID, arrayProductos)=>{
     for(let i=0;i<arrayProductos.length; i++){
@@ -61,6 +77,13 @@ const moverProdACarrito = (productoID, arrayProductos)=>{
         }
     }
 }
+
+
+const crearProducto = (nombre, id, precio)=>{
+    productos.push(new Producto(nombre, id, precio))
+    console.log(productos)
+}
+
 
 const inflacion = ()=>{
     for(let i=0;i<productos.length; i++){
@@ -77,6 +100,24 @@ crearProducto("chupetin", 3, 150)
 crearProducto("chicles", 4, 400)
 
 // moverProdACarrito(1, productos)
-// moverProdACarrito(1, productos)
-// moverProdACarrito(1, productos)
-// moverProdACarrito(1, productos)
+// moverProdACarrito(2, productos)
+// moverProdACarrito(3, productos)
+// moverProdACarrito(4, productos)
+
+
+
+
+
+// Extra
+// Esta función puede ver si algo es un JSON utilizando promesas, mejoraría el código de arriba perosupera lo visto ahsta el momento
+/* 
+function isJSON(string) {
+    try {
+        return (JSON.parse(string) && !!string);
+    } catch (e) {
+        return false;
+    }
+}
+
+
+*/
