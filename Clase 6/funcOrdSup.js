@@ -122,6 +122,7 @@ console.log(array.map((elemento)=>{
 // 🔹 parametros de la función parámetro:
 //   ◽ valor a acumular
 //   ◽ elemento del array
+// ⛔ El orden de los parámetros importa
 // 🔹 debe de retornar un número la función parámetro
 // 🔹 con una , al final se pone el valor inicial del total
 // 🔹 RETORNA UN NÚMERO
@@ -131,7 +132,7 @@ const valorReducido = array.reduce((elemento, total)=>{
 }, valorInicial)
 */
 
-// const sumaTotal = array.reduce((elemento, total)=>{
+// const sumaTotal = array.reduce((total, elemento)=>{
 //     return total + elemento
 // },0)
 // console.log(sumaTotal)

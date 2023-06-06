@@ -22,30 +22,32 @@ class Producto {
 const productos = []
 
 const existeId = (id)=>{
-    productos.some(elemento=>{
+    // en clase me falto el primer return únicamente para que funcione, por eso no funcionaba correctamente
+    return productos.some(elemento=>{
         return elemento.id === id
     })
 }
 
-const agregarProducto = (elemento)=>{
-    if(existeId(elemento.id)){
-        alert("Ya existe un producto con ese ID")
-    } else {
-        productos.push(elemento)
-    }
-    console.log(productos)
-}
 
 
-const crearProducto = ()=>{
+const agregarProducto = ()=>{
     alert("Esta creando un producto")
     const id = parseInt(prompt("Por favor ingrese el id del producto"))
     const descripcion = prompt("Por favor ingrese el descripcion del producto")
     const stock = parseInt(prompt("Por favor ingrese el stock del producto"))
     const precio = Number(prompt("Por favor ingrese el precio del producto"))
     const nuevoProducto = new Producto(id,descripcion, stock, precio)
-    return nuevoProducto
+    if(existeId(id)){
+        alert("Ya existe un producto con ese ID")
+    } else {
+        productos.push(nuevoProducto)
+    }
+    console.log(productos)
 }
 
-agregarProducto(crearProducto())
-agregarProducto(crearProducto())
+let loop = true
+while(loop){
+    agregarProducto()
+    loop = confirm("¿Desea agregar otro producto?")
+}
+
